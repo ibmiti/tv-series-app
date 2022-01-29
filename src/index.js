@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const greeting = <h1>Hello world</h1>; // using jsx
-const greeting2 = React.createElement('h2', {}, 'hellow world from h2'); // using js 
-ReactDOM.render([greeting, greeting2], document.getElementById('root'));
+const getCurrentDate = () => { 
+  const date = new Date(); // Date class{} doesnt need imported
+  return date.toDateString(); // returns latest date
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const greeting = <h1>Hello world, the current date: {getCurrentDate()}</h1>; // using jsx
+// const greeting2 = React.createElement('h2', {}, 'hellow world from h2'); // using js 
+ReactDOM.render(greeting, document.getElementById('root'))
+reportWebVitals(); // performance measurements
 
