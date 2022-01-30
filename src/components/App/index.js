@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    series : []  // stateObject
+    series : []  // stateObject : is set by componentDidMount()'s return
   }
 
   // component lifecycle management;
