@@ -7,6 +7,15 @@ class App extends Component {
     series : []  // stateObject
   }
 
+  // component lifecycle management;
+  componentDidMount() {
+    const series = ["vikings ", "game of thrones"];
+
+    setTimeout(() => {
+      this.setState({ series: series }); // sets component with new state after some time
+    }, 2000); // 2sec time out delay
+  }
+
   render(){
     return (
       <div className="App">
